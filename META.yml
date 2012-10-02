@@ -1,5 +1,5 @@
 ---
-abstract: 'Geo::Hash* wrapper with any utils'
+abstract: 'Great all in one Geohash library'
 author:
   - 'Kazuhiro Osawa <yappo {at} shibuya {dot} pl>'
 build_requires:
@@ -15,7 +15,7 @@ license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
-name: GeoHash
+name: Geohash
 no_index:
   directory:
     - inc
@@ -25,7 +25,7 @@ requires:
   Geo::Hash: 0
   parent: 0
 resources:
-  homepage: https://github.com/yappo/p5-GeoHash/tree
+  homepage: https://github.com/yappo/p5-Geohash/tree
   license: http://dev.perl.org/licenses/
-  repository: git://github.com/yappo/p5-GeoHash.git
-version: 0.01
+  repository: git://github.com/yappo/p5-Geohash.git
+version: 0.02

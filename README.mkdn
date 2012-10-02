@@ -1,13 +1,13 @@
 # NAME
 
-GeoHash - Geo::Hash* wrapper with any utils
+Geohash - Great all in one Geohash library
 
 # SYNOPSIS
 
 simple wrapper
 
-    use GeoHash;
-    my $gh = GeoHash->new();
+    use Geohash;
+    my $gh = Geohash->new();
     my $hash = $gh->encode( $lat, $lon );  # default precision = 32
     my $hash = $gh->encode( $lat, $lon, $precision );
     my ($lat, $lon) = $gh->decode( $hash );
@@ -19,7 +19,7 @@ compatible with Pure Perl and XS
     my $adjacent_hash = $gh->adjacent($hash, $where);
     my @list_of_geohashes = $gh->neighbors($hash, $around, $offset);
 
-specific utilities of GeoHash.pm
+specific utilities of Geohash.pm
 
     my @list_of_merged_geohashes = $gh->merge(@list_of_geohashes);
     my @list_of_geohashes = $gh->split(@list_of_merged_geohashes);
@@ -28,22 +28,28 @@ specific utilities of GeoHash.pm
 fource use pp
 
    BEGIN { $ENV{PERL_GEOHASH_BACKEND} = 'Geo::Hash' }
-   use GeoHash;
+   use Geohash;
 
 fource use xs
 
    BEGIN { $ENV{PERL_GEOHASH_BACKEND} = 'Geo::Hash::XS' }
-   use GeoHash;
+   use Geohash;
 
 # DESCRIPTION
 
-GeoHash is a wrapper module for use in the same interface and [Geo::Hash](http://search.cpan.org/perldoc?Geo::Hash) [Geo::Hash::XS](http://search.cpan.org/perldoc?Geo::Hash::XS). and utility method has been added to it.
+[Geohash](http://search.cpan.org/perldoc?Geohash) can handle easily Geohash. Geohash uses [Geo::Hash](http://search.cpan.org/perldoc?Geo::Hash) or [Geo::Hash::XS](http://search.cpan.org/perldoc?Geo::Hash::XS) as a backend module.
+You can easy choose of Pure-Perl implement or XS implement.
+In addition, we have also been added useful utility methods.
 
-You can use the methods in the [Geo::Hash](http://search.cpan.org/perldoc?Geo::Hash) has been implemented in only [Geo::Hash::XS](http://search.cpan.org/perldoc?Geo::Hash::XS).
+# Why did you not used the name of Geo::Hash::Any?
+
+Geohash official name is not _Geo::Hash_. It should not be separated by _::_. And I think of _*::Any_ namespace is not preferable.
+
+I think so no problem with increasing the namespace if a namespace that can be used to implement and intuitive.
 
 # METHODS
 
-## $gh = GeoHash->new()
+## $gh = Geohash->new()
 
 ## $hash = $gh->encode($lat, $lon[, $precision])
 
@@ -51,7 +57,7 @@ Encodes the given `$lat` and `$lon` to a geohash. If `$precision` is not
 given, automatically adjusts the precision according the the given `$lat`
 and `$lon` values.
 
-If you do not want GeoHash to spend time calculating this, explicitly
+If you do not want Geohash to spend time calculating this, explicitly
 specify `$precision`.
 
 ## ($lat, $lon) = $gh->decode( $hash )
@@ -71,9 +77,9 @@ Returns the apparent required precision to describe the given latitude and longi
 Returns the adjacent geohash. `$where` denotes the direction, so if you
 want the block to the right of `$hash`, you say:
 
-    use GeoHash qw(ADJ_RIGHT);
+    use Geohash qw(ADJ_RIGHT);
 
-    my $gh = GeoHash->new();
+    my $gh = Geohash->new();
     my $adjacent = $gh->adjacent( $hash, ADJ_RIGHT );
 
 ## @list_of_geohashes = $gh->neighbors($hash, $around, $offset)
@@ -124,7 +130,12 @@ Kazuhiro Osawa <yappo {at} shibuya {dot} pl>
 
 # SEE ALSO
 
-[Geo::Hash](http://search.cpan.org/perldoc?Geo::Hash), [Geo::Hash::XS](http://search.cpan.org/perldoc?Geo::Hash::XS)
+[Geo::Hash](http://search.cpan.org/perldoc?Geo::Hash), [Geo::Hash::XS](http://search.cpan.org/perldoc?Geo::Hash::XS),
+[http://en.wikipedia.org/wiki/Geohash](http://en.wikipedia.org/wiki/Geohash), [http://geohash.org/](http://geohash.org/)
+
+# THANKS TO
+
+dirkus, tokuhirom, nipotan
 
 # LICENSE
 

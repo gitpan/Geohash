@@ -13,7 +13,7 @@ inc/Module/Install/Repository.pm
 inc/Module/Install/Win32.pm
 inc/Module/Install/WriteAll.pm
 inc/Pod/Markdown.pm
-lib/GeoHash.pm
+lib/Geohash.pm
 Makefile.PL
 MANIFEST			This list of files
 META.yml
