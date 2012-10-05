@@ -5,7 +5,6 @@ author:
 build_requires:
   ExtUtils::MakeMaker: 6.36
   Test::More: 0
-  Test::Require: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.36
 distribution_type: module
@@ -28,4 +27,4 @@ resources:
   homepage: https://github.com/yappo/p5-Geohash/tree
   license: http://dev.perl.org/licenses/
   repository: git://github.com/yappo/p5-Geohash.git
-version: 0.02
+version: 0.03
