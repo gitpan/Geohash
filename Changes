@@ -1,5 +1,8 @@
 Revision history for Perl extension GeoHash
 
+0.04    2012-10-16T13:33:30+09:00
+        - fixed to backend detection bug (reported by sugyan++)
+
 0.03    2012-10-05T16:03:12+09:00
         - fixed require module name typo (Test::Require)
 

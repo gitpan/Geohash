@@ -27,4 +27,4 @@ resources:
   homepage: https://github.com/yappo/p5-Geohash/tree
   license: http://dev.perl.org/licenses/
   repository: git://github.com/yappo/p5-Geohash.git
-version: 0.03
+version: 0.04
